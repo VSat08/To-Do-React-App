@@ -8,6 +8,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #F6F7F8 !important;
+  overflow-x: hidden;
 }
 
 code {
@@ -15,5 +17,11 @@ code {
     monospace;
 }
 ::-webkit-scrollbar{
-  color: #000;
+  /* background: #000; */
+  width: 7px;
+}
+::-webkit-scrollbar-thumb{
+  max-height:10px ;
+  background: linear-gradient(red,orange);
+  border-radius: 20px;
 }
