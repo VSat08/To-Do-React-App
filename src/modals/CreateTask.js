@@ -10,12 +10,13 @@ const CreateTaskPopup = ({ modal, toggle, save }) => {
     let hours = date.getHours();
     
     let mins = date.getMinutes();
-    mins = mins > 10 ? mins : '0'.concat(JSON.stringify(mins))
-    mins = hours < 12 ? (JSON.stringify(mins)).concat(' a.m.') : (JSON.stringify(mins)).concat(' p.m.')
+    
     let day = date.getDate();
     let month = date.getMonth() + 1;
     let year = date.getFullYear();
-    let currentDateandTime = `${hours}:${mins} ${day}/${month}/${year}`;
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let days = weekday[date.getDay()];
+    let currentDateandTime = `${hours % 12}:${mins > 10 ? '' : '0'} ${mins} ${hours < 12 ? ' a.m' : ' p.m' } ${day}-${month}-${year} ${days}`;
 
     const handleChange = (e) => {
 

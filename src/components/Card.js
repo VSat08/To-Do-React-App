@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import EditTask from '../modals/EditTask'
+import ViewTask from '../modals/ViewTask';
 
-const Card = ({ taskObj, index, deleteTask, updateListArray, timing }) => {
+const Card = ({ taskObj, index, deleteTask, updateListArray }) => {
     const [modal, setModal] = useState(false);
+    const [viewmodal, setViewModel] = useState(false);
 
     const colors = [
         {
@@ -39,20 +41,32 @@ const Card = ({ taskObj, index, deleteTask, updateListArray, timing }) => {
         deleteTask(index)
     }
     return (
-        <div className="card-wrapper mr-5">
-            <div className="card-top" style={{ "backgroundColor": colors[index % 5].primaryColor }}></div>
-            <div className="task-holder">
-                <span className="card-header" style={{ "backgroundColor": colors[index % 5].secondaryColor, "borderRadius": "10px" }}>{taskObj.Name}</span>
-                <p className="mt-3">{taskObj.Description}</p>
+        <>
+            <div className="card-wrapper mr-5" onClick={() => setViewModel(true)}>
+                <div className="card-top" style={{ "backgroundColor": colors[index % 5].primaryColor }}></div>
+                <div className="task-holder">
+                    <div className="card-header" style={{ "backgroundColor": colors[index % 5].secondaryColor, "borderRadius": "10px" }}>{taskObj.Name}</div>
+                    <div className="task-description" >
+                        <p className="mt-3" onClick={() => setViewModel(true)} >{taskObj.Description}</p>
+                    </div>
 
-                <div style={{ "position": "absolute", "right": "20px", "bottom": "20px" }}>
-                    <i className="far fa-edit me-3" style={{ "color": colors[index % 5].primaryColor, "cursor": "pointer" }} onClick={() => setModal(true)}></i>
-                    <i className="fas fa-trash-alt" style={{ "color": colors[index % 5].primaryColor, "cursor": "pointer" }} onClick={handleDelete}></i>
+                    <div className="card-footer">
+                       
+                        <div className='col-lg-8 col-md-8 col-sm-7' >
+                            <p className='date'>{taskObj.Date}</p>
+                        </div>
+                        <div className='col-lg-4 col-md-4 col-sm-5 text-center' >
+                            <i className="far fa-edit me-3" style={{ "color": colors[index % 5].primaryColor, "cursor": "pointer" }} onClick={() => setModal(true)}></i>
+                            <i className="fas fa-trash-alt" style={{ "color": colors[index % 5].primaryColor, "cursor": "pointer" }} onClick={handleDelete}></i>
+                        </div>
+                   </div>
                 </div>
-                <div style={{ "position": "absolute", "left": "15px", "bottom": "10px" }}><p className='lead date'>{taskObj.Date}</p></div>
+                <EditTask modal={modal} toggle={toggle} updateTask={updateTask} taskObj={taskObj} />
+
+
             </div>
-            <EditTask modal={modal} toggle={toggle} updateTask={updateTask} taskObj={taskObj} />
-        </div>
+            <ViewTask show={viewmodal} onHide={() => setViewModel(false)} taskObj={taskObj} />
+        </>
     );
 };
 

@@ -4,7 +4,7 @@ import Card from './Card';
 import Navbar from './Navbar';
 import OffCanvas from './OffCanvas';
 import Footer from './Footer';
-
+import EmptyWorkspace from './emptyWorkspace';
 
 
 export default function TodoList() {
@@ -16,7 +16,7 @@ export default function TodoList() {
     const [classSideNavProp, setClassSideNavProp] = useState(() => {
         return window.innerWidth > 998 ? 'd-none' : ''
     })
-
+    
 
 
 
@@ -70,7 +70,36 @@ export default function TodoList() {
         setTaskList(taskList)
         setModal(false)
     }
-
+    // const themeList =[
+    //     {
+    //         "themeName": "OrangeFun",
+    //         "bgColor1": "#fc4a1a",
+    //         "bgColor2": "#f7b733",
+    //         "textColor": "#000",
+            
+    //     },
+    //     {
+    //         "themeName": "DeepSpace",
+    //         "bgColor1": "#000000",
+    //         "bgColor2": "#434343",
+    //         "textColor": "#fff",
+            
+    //     },
+    //     {
+    //         "themeName": "Lawrencium",
+    //         "bgColor1": "#0f0c29",
+    //         "bgColor2": "#302b63",
+    //         "textColor": "#fff",
+            
+    //     },
+    //     {
+    //         "themeName": "Frost",
+    //         "bgColor1": "#000428",
+    //         "bgColor2": "#004e92",
+    //         "textColor": "#fff",
+            
+    //     }
+    // ]
 
     return (
         <>
@@ -78,10 +107,15 @@ export default function TodoList() {
             <OffCanvas sideNavClass={classSideNavProp} />
             <div className="header text-center">
                 <h3 className='display-2'>To-Do App </h3>
-                <button className="create-button  btn mt-2" onClick={() => setModal(true)} >Create Task</button>
+                <p className='lead text-light m-1'>Create and stay Organized!! </p>
+                <p className='lead text-light m-1'>Unleash Your Productivity: Your Ultimate To-Do List App!</p>
+                <button className="create-button  btn mt-2 px-5 py-2" onClick={() => setModal(true)} >Create Task</button>
             </div>
             <div className="task-container">
-                {taskList && taskList.map((obj, index) => <Card taskObj={obj} index={index} deleteTask={deleteTask} updateListArray={updateListArray} />)}
+                
+                {/* {taskList && taskList.map((obj, index) => <Card taskObj={obj} index={index} deleteTask={deleteTask} updateListArray={updateListArray} />)
+                } */}
+                {taskList.length > 0 ? taskList && taskList.map((obj, index) => <Card taskObj={obj} index={index} deleteTask={deleteTask} updateListArray={updateListArray} />) : <EmptyWorkspace />}
             </div>
             <CreateTask toggle={toggle} modal={modal} save={saveTask} />
             <Footer />

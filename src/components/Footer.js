@@ -138,7 +138,7 @@ function Footer() {
               </div>
               <div className="content">
                   <div>
-                      <div><a href="/"  className='display-4'>To-Do App</a></div>
+                      <div><a href="/"  className='display-5'>To-Do App</a></div>
 
                       <p className="lead">
                           Introducing our powerful and user-friendly to-do list app built using React. Designed to simplify task management and boost productivity, our app provides a seamless and intuitive interface for creating, organizing, and tracking your to-do items. With its responsive design and extensive features, this app is a must-have tool for individuals and teams seeking an efficient way to stay organized and accomplish their goals. Whether you're juggling personal tasks or collaborating on team projects, our React-based to-do list app is here to streamline your workflow and help you stay on top of your responsibilities.</p>
@@ -146,12 +146,12 @@ function Footer() {
                   </div>
                   <div>
                       {/* <a className="image" href="https://codepen.io/z-" target="_blank" style={{ 'backgroundImage': 'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg")' }} /> */}
-                      <p>©2019 Not Really</p>
+                      <p>©2023 Satyam Verma</p>
                   </div>
+              </div>
                   <div className="socialIcon-Box">
                       <SocialIcons />
              </div>
-              </div>
           </div>
           <svg style={{ 'position': 'fixed', 'top': '100vh' }}>
               <defs>

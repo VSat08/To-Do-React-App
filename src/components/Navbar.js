@@ -7,11 +7,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Button } from 'reactstrap';
 import SwitchTheme from './SwitchTheme';
 
-function CollapsibleExample({ navClass }) {
+function CollapsibleExample({ navClass}) {
     return (
-        <Navbar className={`topbar ${navClass}`} collapseOnSelect expand="lg" variant='dark' >
+        <Navbar className={` ${navClass}`} collapseOnSelect expand="lg" variant='dark' >
             <Container>
-                <Navbar.Brand href="#home">To-DO</Navbar.Brand>
+                <Navbar.Brand href="/">To-DO</Navbar.Brand>
 
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -35,13 +35,13 @@ function CollapsibleExample({ navClass }) {
                             <i className="fa-regular fa-sun"></i>
 
                             <NavDropdown title="" id="collasible-nav-dropdown">
-                            <SwitchTheme />
+                                <SwitchTheme />
                         </NavDropdown></Button>
-                        <Nav.Link eventKey={2} href="#memes">
+                        <Nav.Link eventKey={2} href="https://github.com/VSat08">
                             About Author
                         </Nav.Link>
-                        <Nav.Link href="#deets"><i className="fa-brands fa-linkedin" ></i></Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
+                        <Nav.Link href="https://www.linkedin.com/in/satyam-verma-10416722a/"><i className="fa-brands fa-linkedin" ></i></Nav.Link>
+                        <Nav.Link eventKey={2} href="https://github.com/VSat08">
                             <i className="fa-brands fa-github" ></i>
                         </Nav.Link>
                     </Nav>

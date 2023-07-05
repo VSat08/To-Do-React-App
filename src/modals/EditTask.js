@@ -4,11 +4,26 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 const EditTaskPopup = ({ modal, toggle, updateTask, taskObj }) => {
     const [taskName, setTaskName] = useState('');
     const [description, setDescription] = useState('');
+    const [currentDate, setCurrentDate] = useState('');
+
+    const date = new Date();
+    let hours = date.getHours();
+
+    let mins = date.getMinutes();
+
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let days = weekday[date.getDay()];
+    let currentDateandTime = `${hours % 12}:${mins > 10 ? '' : '0'} ${mins} ${hours < 12 ? ' a.m' : ' p.m'} ${day}-${month}-${year} ${days}`;
+
 
     const handleChange = (e) => {
 
         const { name, value } = e.target
-
+        setCurrentDate(currentDateandTime)
+        
         if (name === "taskName") {
             setTaskName(value)
         } else {
@@ -17,10 +32,11 @@ const EditTaskPopup = ({ modal, toggle, updateTask, taskObj }) => {
 
 
     }
-
+    
     useEffect(() => {
         setTaskName(taskObj.Name)
         setDescription(taskObj.Description)
+        setCurrentDate(currentDateandTime)
     }, [])
 
     const handleUpdate = (e) => {
@@ -28,7 +44,9 @@ const EditTaskPopup = ({ modal, toggle, updateTask, taskObj }) => {
         let tempObj = {}
         tempObj['Name'] = taskName
         tempObj['Description'] = description
+        tempObj["Date"] = currentDate
         updateTask(tempObj)
+        setCurrentDate(currentDate)
     }
 
     return (
