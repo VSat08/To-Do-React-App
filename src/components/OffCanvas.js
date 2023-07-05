@@ -87,7 +87,8 @@ function OffCanvas({ sideNavClass }) {
                                 </strong></p>
                                 <p>
                                     Hey Folks!!<br></br>
-                                    Me Satyam , brought an organized app for making you more organized !!
+                                   
+                                    Satyam here!, and I've developed an organized app to help you become more organized!
                                </p>
                             </AccordionBody>
                         </AccordionItem>
