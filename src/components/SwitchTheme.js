@@ -9,25 +9,25 @@ function SwitchTheme() {
             <FormGroup>
                 <Label check>
                 <Input type="radio" name='selectcolor' value='OrangeFun'  style={{'borderRadius':'2px'}}/>
-                    Light
+                    Light <small>(<em>To be updated Soon....</em>)</small>
                 </Label>
             </FormGroup>
             <FormGroup>
                 <Label check>
-                    <Input type="radio" name='selectcolor' value='DeepSpace'  style={{'borderRadius':'2px'}}/>
-                    Dark
+                    <Input type="radio" name='selectcolor' value='DeepSpace'  style={{'borderRadius':'2px'}} />
+                    Dark <small>(<em>To be updated Soon....</em>)</small>
                 </Label>
             </FormGroup>
             <FormGroup>
                 <Label check>
                 <Input type="radio" name='selectcolor' value='Lawrencium' style={{'borderRadius':'2px'}}/>
-                    Dark 2
+                    Dark 2 <small>(<em>To be updated Soon....</em>)</small>
                 </Label>
             </FormGroup>
             <FormGroup>
                 <Label check>
                     <Input type="radio" name='selectcolor' value='Frost'  style={{'borderRadius':'2px'}}/>
-                    Dark 3
+                    Dark 3 <small>(<em>To be updated Soon....</em>)</small>
                 </Label>
             </FormGroup>
         </Form>

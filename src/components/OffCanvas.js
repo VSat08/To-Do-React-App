@@ -13,7 +13,7 @@ function OffCanvas({ sideNavClass }) {
 
     return (
         <div className={`${sideNavClass}`}>
-            <Button variant="light" className="d-lg-none mt-3 ms-3" onClick={handleShow}>
+            <Button variant="dark" className="d-lg-none mt-3 ms-3" onClick={handleShow}>
                 <i className="fa-solid fa-bars" style={{"cursor": "pointer" }}></i>
             </Button>
 
@@ -69,33 +69,39 @@ function OffCanvas({ sideNavClass }) {
                               
                             </AccordionBody>
                         </AccordionItem>
-                        {/* <AccordionItem>
+                        <AccordionItem>
                             <AccordionHeader targetId="2">
                                 Features and Utils
                             </AccordionHeader>
                             <AccordionBody accordionId="2">
-                                <strong>
-                                    This is the second item's accordion body.
-                                </strong>
-                                You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the{' '}
-                                <code>
-                                    .accordion-body
-                                </code>
-                                , though the transition does limit overflow.
+                               Create,Organize,Edit,Follow with this React To-Do App!
                             </AccordionBody>
-                        </AccordionItem> */}
+                        </AccordionItem>
                         <AccordionItem>
                             <AccordionHeader targetId="3">
                                 About Author
                             </AccordionHeader>
                             <AccordionBody accordionId="3">
                                 <p> <strong>
-                                    By Satyam Verma.
+                                    &copy;By Satyam Verma.
                                 </strong></p>
                                 <p>
                                     Hey Folks!!<br></br>
-                                    Me Satyam , brought a organized app for making you more organized !!
+                                    Me Satyam , brought an organized app for making you more organized !!
                                </p>
+                            </AccordionBody>
+                        </AccordionItem>
+                        <AccordionItem  >
+                            <AccordionHeader targetId="3">
+                                <b className='text-danger'>IMPORTANT!!</b>
+                            </AccordionHeader>
+                            <AccordionBody accordionId="3" >
+                                <p> 
+                                    This App is still under devlopment and updation.
+                                    Features like <b>Multiple Dark modes</b>, <b>Frequency counter</b> and <b>Filtering</b> will be going to be added soon.....<br /><br />
+                                    Till then Happy Using the App.<br /><br />
+                                    For Queries, do contact and give your Feedback
+                                </p>
                             </AccordionBody>
                         </AccordionItem>
                     </UncontrolledAccordion>
