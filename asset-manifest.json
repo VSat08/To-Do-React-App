@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/To-Do-React-App/static/css/main.ed00d9a7.css",
-    "main.js": "/To-Do-React-App/static/js/main.36d3002b.js",
+    "main.css": "/To-Do-React-App/static/css/main.0dc9387a.css",
+    "main.js": "/To-Do-React-App/static/js/main.14c782a4.js",
     "static/js/787.7f2c2da0.chunk.js": "/To-Do-React-App/static/js/787.7f2c2da0.chunk.js",
     "static/media/bggif.gif": "/To-Do-React-App/static/media/bggif.cf53289f5266ffe4bb27.gif",
     "index.html": "/To-Do-React-App/index.html",
-    "main.ed00d9a7.css.map": "/To-Do-React-App/static/css/main.ed00d9a7.css.map",
-    "main.36d3002b.js.map": "/To-Do-React-App/static/js/main.36d3002b.js.map",
+    "main.0dc9387a.css.map": "/To-Do-React-App/static/css/main.0dc9387a.css.map",
+    "main.14c782a4.js.map": "/To-Do-React-App/static/js/main.14c782a4.js.map",
     "787.7f2c2da0.chunk.js.map": "/To-Do-React-App/static/js/787.7f2c2da0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed00d9a7.css",
-    "static/js/main.36d3002b.js"
+    "static/css/main.0dc9387a.css",
+    "static/js/main.14c782a4.js"
   ]
 }
