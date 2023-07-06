@@ -11,10 +11,10 @@ export default function TodoList() {
     const [modal, setModal] = useState(false);
     const [taskList, setTaskList] = useState([])
     const [classNavProp, setClassNavProp] = useState(() => {
-        return window.innerWidth < 998 ? 'd-none' : ''
+        return window.innerWidth < 768 ? 'd-none' : ''
     })
     const [classSideNavProp, setClassSideNavProp] = useState(() => {
-        return window.innerWidth > 998 ? 'd-none' : ''
+        return window.innerWidth > 768 ? 'd-none' : ''
     })
     
 

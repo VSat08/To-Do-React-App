@@ -1,6 +1,8 @@
 
 #main{
-    width: 100%;
+    /* width: 100%; */
+    width: 100vw;
+   
     background: linear-gradient(to bottom right,#ec2f4b 55%,#009fff);
 }
 .footer {
@@ -42,7 +44,6 @@
     height: 100%;
     width: 100%;
     grid-template-columns: 80% auto;
-  
     background:linear-gradient(to bottom right, #ec2f4b 1, #009fff);
 }
 

@@ -19,14 +19,16 @@ function OffCanvas({ sideNavClass }) {
 
            
 
-            <Offcanvas className='lightTheme' show={show} onHide={handleClose} responsive="xl">
+            <Offcanvas className='lightTheme' style={{
+                'maxWidth': '80vw'
+            }} show={show} onHide={handleClose} responsive="lg">
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>
                       
                     </Offcanvas.Title>
                 </Offcanvas.Header>
 
-                <Offcanvas.Body>
+                <Offcanvas.Body id='sidenavBody'>
                     <div style={{'display':'flex','justifyContent':'space-between','alignItems':'center'}}>
                         <h2 className='display-2'>
                             To Do App
@@ -93,10 +95,10 @@ function OffCanvas({ sideNavClass }) {
                             </AccordionBody>
                         </AccordionItem>
                         <AccordionItem  >
-                            <AccordionHeader targetId="3">
+                            <AccordionHeader targetId="4">
                                 <b className='text-danger'>IMPORTANT!!</b>
                             </AccordionHeader>
-                            <AccordionBody accordionId="3" >
+                            <AccordionBody accordionId="4" >
                                 <p> 
                                     This App is still under devlopment and updation.
                                     Features like <b>Multiple Dark modes</b>, <b>Frequency counter</b> and <b>Filtering</b> will be going to be added soon.....<br /><br />

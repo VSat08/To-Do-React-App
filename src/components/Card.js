@@ -42,18 +42,20 @@ const Card = ({ taskObj, index, deleteTask, updateListArray }) => {
     }
     return (
         <>
-            <div className="card-wrapper mr-5" onClick={() => setViewModel(true)}>
+            <div className="card-wrapper mr-5">
                 <div className="card-top" style={{ "backgroundColor": colors[index % 5].primaryColor }}></div>
-                <div className="task-holder">
-                    <div className="card-header" style={{ "backgroundColor": colors[index % 5].secondaryColor, "borderRadius": "10px" }}>{taskObj.Name}</div>
+
+                <div  className="task-holder">
+                    <div onClick={() => setViewModel(true)} className="card-header" style={{ "backgroundColor": colors[index % 5].secondaryColor, "borderRadius": "10px" }}>{taskObj.Name}</div>
+
                     <div className="task-description" >
-                        <p className="mt-3" onClick={() => setViewModel(true)} >{taskObj.Description}</p>
+                        <p onClick={() => setViewModel(true)} className="mt-3" >{taskObj.Description}</p>
                     </div>
 
                     <div className="card-footer">
                        
                         <div className='col-lg-8 col-md-8 col-sm-7' >
-                            <p className='date'>{taskObj.Date}</p>
+                            <p onClick={() => setViewModel(true)} className='date'>{taskObj.Date}</p>
                         </div>
                         <div className='col-lg-4 col-md-4 col-sm-5 text-center' >
                             <i className="far fa-edit me-3" style={{ "color": colors[index % 5].primaryColor, "cursor": "pointer" }} onClick={() => setModal(true)}></i>

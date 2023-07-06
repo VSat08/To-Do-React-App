@@ -9,7 +9,7 @@ import SwitchTheme from './SwitchTheme';
 
 function CollapsibleExample({ navClass}) {
     return (
-        <Navbar className={` ${navClass}`} collapseOnSelect expand="lg" variant='dark' >
+        <Navbar className={` ${navClass}`} collapseOnSelect expand="md" variant='dark' >
             <Container>
                 <Navbar.Brand href="/"><span>To-Do App </span><sub><span className='px-2 text-dark  rounded rounded bg-light'>Made with React</span></sub></Navbar.Brand>
 

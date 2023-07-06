@@ -1,7 +1,13 @@
+.App{
+  overflow-x: hidden;
+  width: 100%;
+}
 * {
   transition: all 0.4s ease-in-out;
 }
-
+#sidenavBody::-webkit-scrollbar{
+  display: none;
+}
 .header {
   margin-top: -140px;
   height: 50vh;

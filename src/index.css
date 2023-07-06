@@ -10,7 +10,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #F6F7F8 !important;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  width: 100vw !important;
 }
 
 code {
